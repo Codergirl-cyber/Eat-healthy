@@ -1,19 +1,4 @@
-.container {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 30px;
-}
-
-.heading {
-  font-size: 42px;
-  font-weight: 600;
-  overflow: hidden;
-  color: white; /* Added to make the heading visible on dark background */
-}
-
+/* App.css - Cleaned up unused legacy styles */
 .char {
   display: inline-block;
   opacity: 0;
@@ -26,10 +11,4 @@
     opacity: 1;
     transform: translateY(0);
   }
-}
-
-.btn {
-  padding: 12px 28px;
-  font-size: 18px;
-  cursor: pointer;
 }

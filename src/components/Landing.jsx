@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import MagicRings from '../MagicRings.jsx';
 import { ArrowRight, Zap, Leaf, Heart, Droplets, ChevronRight } from 'lucide-react';
@@ -23,11 +23,28 @@ export default function Landing() {
   const previewFruits = fruitsData.slice(0, 6);
   useScrollReveal();
 
+  const [isLight, setIsLight] = useState(document.documentElement.classList.contains('light'));
+
+  useEffect(() => {
+    const observer = new MutationObserver(() => {
+      setIsLight(document.documentElement.classList.contains('light'));
+    });
+    observer.observe(document.documentElement, { attributes: true, attributeFilter: ['class'] });
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <div className="landing-container page-enter">
       {/* Background */}
       <div className="bg-rings">
-        <MagicRings />
+        <MagicRings 
+          color={isLight ? "#0EA5A4" : "#8B5CF6"} 
+          colorTwo={isLight ? "#2DD4BF" : "#7C3AED"} 
+          opacity={isLight ? 0.12 : 0.4} 
+          speed={0.5} 
+          ringCount={4}
+          baseRadius={0.4}
+        />
         <div className="rings-overlay" />
       </div>
 
@@ -40,7 +57,7 @@ export default function Landing() {
           </div>
           <h1 className="hero-heading">
             Find what to eat<br />
-            <span className="gradient-text">today</span>
+            <span>today</span>
           </h1>
           <p className="hero-subtext">
             Discover the right fruits for your season, health goals, and daily routine.
