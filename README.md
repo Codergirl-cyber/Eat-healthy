@@ -1,4 +1,4 @@
-# Fruits 🍓
+# EAT HEALTHY
 
 A modern fruit discovery web app that helps users explore fruits based on their needs and seasonal preferences. Instead of endlessly searching for what fruit fits a specific goal, users can quickly discover relevant fruits and useful information through a clean and simple interface.
 
