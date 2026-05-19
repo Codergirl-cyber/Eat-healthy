@@ -6,9 +6,8 @@ A modern fruit discovery web app that helps users explore fruits based on their 
 
 [https://eat-healthy-chi.vercel.app/](https://eat-healthy-chi.vercel.app/)
 
-## Screenshots
+<img width="1919" height="909" alt="image" src="https://github.com/user-attachments/assets/a1345c36-dd45-458f-b0c4-34cc9bfabbbf" />
 
-(Add screenshots or GIFs here)
 
 ## Features
 
